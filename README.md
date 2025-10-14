@@ -94,10 +94,10 @@ After cloning, you should have:
 ```
 ./examples/WanVSR/FlashVSR/
 │
-├── LQ_proj_in.ckpt                                   # 576 MB
-├── TCDecoder.ckpt                                    # 189 MB
-├── Wan2.1_VAE.pth                                    # 508 MB
-├── diffusion_pytorch_model_streaming_dmd.safetensors # 5.68 GB
+├── LQ_proj_in.ckpt                                   
+├── TCDecoder.ckpt                                    
+├── Wan2.1_VAE.pth                                    
+├── diffusion_pytorch_model_streaming_dmd.safetensors 
 └── README.md
 ```
 
