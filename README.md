@@ -124,7 +124,7 @@ The overview of **FlashVSR**. This framework features:
 * **Tiny Conditional Decoder** for efficient, high-quality reconstruction.
 * **VSR-120K Dataset** consisting of **120k videos** and **180k images**, supports joint training on both images and videos.
 
-<img src="./examples/WanVSR/assert/flowchart.png" width="1000" />
+<img src="./examples/WanVSR/assert/flowchart.jpg" width="1000" />
 
 ---
 
