@@ -203,7 +203,7 @@ def main():
         "./inputs/example3.mp4",
     ]
     seed, scale, dtype, device = 0, 4.0, torch.bfloat16, 'cuda'
-    sparse_ratio = 2.0
+    sparse_ratio = 2.0      # Recommended: 1.5 or 2.0. 1.5 → faster; 2.0 → more stable.
     pipe = init_pipeline()
 
     for p in inputs:
@@ -221,7 +221,7 @@ def main():
             LQ_video=LQ, num_frames=F, height=th, width=tw, is_full_block=False, if_buffer=True,
             topk_ratio=sparse_ratio*768*1280/(th*tw), 
             kv_ratio=3.0,
-            local_range=9,  
+            local_range=9,  # Recommended: 9 or 11. local_range=9 → sharper details; 11 → more stable results.
             color_fix = True,
         )
         video = tensor2video(video)

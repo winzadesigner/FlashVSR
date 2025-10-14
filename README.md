@@ -64,7 +64,7 @@ pip install -r requirements.txt
 
 #### 3️⃣ Install Block-Sparse Attention (Required)
 
-FlashVSR **requires** the **Block-Sparse Attention** backend for inference:
+FlashVSR relies on the **Block-Sparse Attention** backend to enable flexible and dynamic attention masking for efficient inference.
 
 ```bash
 git clone https://github.com/mit-han-lab/Block-Sparse-Attention
@@ -73,6 +73,7 @@ pip install packaging
 pip install ninja
 python setup.py install
 ```
+**⚠️ Note:** The Block-Sparse Attention backend currently achieves ideal acceleration only on NVIDIA A100 or A800 GPUs (Ampere architecture). On H100/H800 (Hopper) GPUs, due to differences in hardware scheduling and sparse kernel behavior, the expected speedup may not be realized, and in some cases performance can even be slower than dense attention.
 
 #### 4️⃣ Download Model Weights from Hugging Face
 
