@@ -7,7 +7,7 @@
 <a href='http://zhuang2002.github.io/FlashVSR'><img src='https://img.shields.io/badge/Project-Page-Green'></a> &nbsp;
 <a href="https://huggingface.co/JunhaoZhuang/FlashVSR"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-blue"></a> &nbsp;
 <a href="https://huggingface.co/datasets/JunhaoZhuang/VSR-120K"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-orange"></a> &nbsp;
-<a href="#"><img src="https://img.shields.io/badge/arXiv-TBD-b31b1b.svg"></a>
+<a href="https://arxiv.org/abs/2510.12747"><img src="https://img.shields.io/badge/arXiv-2510.12747-b31b1b.svg"></a>
 
 **Your star means a lot for us to develop this project!** :star:
 
@@ -155,13 +155,13 @@ We gratefully acknowledge the following open-source projects:
 ### 📜 Citation
 
 ```bibtex
-@misc{zhuang2025flashvsr,
-      title={FLASHVSR: Towards Real-Time Diffusion-Based Streaming Video Super-Resolution},
+@misc{zhuang2025flashvsrrealtimediffusionbasedstreaming,
+      title={FlashVSR: Towards Real-Time Diffusion-Based Streaming Video Super-Resolution}, 
       author={Junhao Zhuang and Shi Guo and Xin Cai and Xiaohui Li and Yihao Liu and Chun Yuan and Tianfan Xue},
       year={2025},
+      eprint={2510.12747},
       archivePrefix={arXiv},
       primaryClass={cs.CV},
-      note={},
-      url={http://zhuang2002.github.io/FlashVSR}
+      url={https://arxiv.org/abs/2510.12747}, 
 }
 ```
