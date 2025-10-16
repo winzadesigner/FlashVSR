@@ -39,6 +39,9 @@ Diffusion models have recently advanced video restoration, but applying them to 
 
 Follow these steps to set up and run **FlashVSR** on your local machine:
 
+> ⚠️ **Note:** This project is primarily designed and optimized for **4× video super-resolution**.  
+> We **strongly recommend** using the **4× SR setting** to achieve better results and stability. ✅
+
 #### 1️⃣ Clone the Repository
 
 ```bash

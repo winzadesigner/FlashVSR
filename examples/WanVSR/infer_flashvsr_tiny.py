@@ -221,7 +221,7 @@ def main():
             LQ_video=LQ, num_frames=F, height=th, width=tw, is_full_block=False, if_buffer=True,
             topk_ratio=sparse_ratio*768*1280/(th*tw), 
             kv_ratio=3.0,
-            local_range=9,  # Recommended: 9 or 11. local_range=9 → sharper details; 11 → more stable results.
+            local_range=11,  # Recommended: 9 or 11. local_range=9 → sharper details; 11 → more stable results.
             color_fix = True,
         )
         video = tensor2video(video)
