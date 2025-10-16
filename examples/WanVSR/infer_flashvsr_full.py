@@ -202,7 +202,9 @@ def main():
             continue
 
         video = pipe(
-            prompt="", negative_prompt="", cfg_scale=1.0, num_inference_steps=1, seed=seed, tiled=True,
+            prompt="", negative_prompt="", cfg_scale=1.0, num_inference_steps=1, seed=seed, 
+            tiled=False,# Disable tiling: faster inference but higher VRAM usage. 
+                        # Set to True for lower memory consumption at the cost of speed.
             LQ_video=LQ, num_frames=F, height=th, width=tw, is_full_block=False, if_buffer=True,
             topk_ratio=sparse_ratio*768*1280/(th*tw), 
             kv_ratio=3.0,
