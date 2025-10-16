@@ -69,6 +69,12 @@ pip install -r requirements.txt
 
 FlashVSR relies on the **Block-Sparse Attention** backend to enable flexible and dynamic attention masking for efficient inference.
 
+> **⚠️ Note:**
+> * The Block-Sparse Attention build process can be memory-intensive, especially when compiling in parallel with multiple `ninja` jobs.
+  It is recommended to keep sufficient memory available during compilation to avoid OOM errors.
+  Once the build is complete, runtime memory usage is stable and not an issue.
+> * The Block-Sparse Attention backend currently achieves ideal acceleration only on NVIDIA A100 or A800 GPUs (Ampere architecture). On H100/H800 (Hopper) GPUs, due to differences in hardware scheduling and sparse kernel behavior, the > expected speedup may not be realized, and in some cases performance can even be slower than dense attention.
+
 ```bash
 git clone https://github.com/mit-han-lab/Block-Sparse-Attention
 cd Block-Sparse-Attention
@@ -76,11 +82,7 @@ pip install packaging
 pip install ninja
 python setup.py install
 ```
-> **⚠️ Note:**
-> * The Block-Sparse Attention build process can be memory-intensive, especially when compiling in parallel with multiple `ninja` jobs.
-  It is recommended to keep sufficient memory available during compilation to avoid OOM errors.
-  Once the build is complete, runtime memory usage is stable and not an issue.
-> * The Block-Sparse Attention backend currently achieves ideal acceleration only on NVIDIA A100 or A800 GPUs (Ampere architecture). On H100/H800 (Hopper) GPUs, due to differences in hardware scheduling and sparse kernel behavior, the > expected speedup may not be realized, and in some cases performance can even be slower than dense attention.
+
 
 #### 4️⃣ Download Model Weights from Hugging Face
 
