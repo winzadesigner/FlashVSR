@@ -11,7 +11,7 @@
 
 **Your star means a lot for us to develop this project!** :star:
 
-<img src="./examples/WanVSR/assert/teaser.png" />
+<img src="./examples/WanVSR/assets/teaser.png" />
 
 ---
 
@@ -25,6 +25,26 @@ Diffusion models have recently advanced video restoration, but applying them to 
 
 - **Release Date:** October 2025 — Inference code and model weights are available now! 🎉  
 - **Coming Soon:** Dataset release (**VSR-120K**) for large-scale training.
+
+---
+
+### ⚠️ Important Quality Notice (ComfyUI & other third-party implementations)
+
+Some third-party implementations of FlashVSR (e.g., early ComfyUI versions) do **not include our Locality-Constrained Sparse Attention (LCSA)** module and instead fall back to **dense attention**. This may lead to **noticeable quality degradation**, especially at higher resolutions.  
+Community discussion: https://github.com/kijai/ComfyUI-WanVideoWrapper/issues/1441
+
+Below is a comparison example provided by a community member:
+
+| Fig.1 – LR Input | Fig.2 – Dense Attention (no LCSA, third-party) | Fig.3 – Official FlashVSR (with LCSA) |
+|------------------|-----------------------------------------------|--------------------------------------|
+| <video src="https://github.com/user-attachments/assets/ea12a191-48d5-47c0-a8e5-e19ad13581a9" controls width="260"></video> | <video src="https://github.com/user-attachments/assets/c8e53bd5-7eca-420d-9cc6-2b9c06831047" controls width="260"></video> | <video src="https://github.com/user-attachments/assets/376057d6-d0f9-4252-bb55-1e52d6da3d21" controls width="260"></video> |
+
+✅ The **official FlashVSR pipeline (this repository)**:
+- **Better preserves fine structures and details**  
+- **Effectively avoids texture aliasing and visual artifacts**
+
+We are also working on a **version that does not rely on the Block-Sparse Attention library** while keeping **the same output quality**; this alternative may run slower than the optimized original implementation.  
+Thanks to the community for testing and helping improve FlashVSR together! 🚀
 
 ---
 
@@ -70,10 +90,9 @@ pip install -r requirements.txt
 FlashVSR relies on the **Block-Sparse Attention** backend to enable flexible and dynamic attention masking for efficient inference.
 
 > **⚠️ Note:**
-> * The Block-Sparse Attention build process can be memory-intensive, especially when compiling in parallel with multiple `ninja` jobs.
-  It is recommended to keep sufficient memory available during compilation to avoid OOM errors.
-  Once the build is complete, runtime memory usage is stable and not an issue.
-> * The Block-Sparse Attention backend currently achieves ideal acceleration only on NVIDIA A100 or A800 GPUs (Ampere architecture). On H100/H800 (Hopper) GPUs, due to differences in hardware scheduling and sparse kernel behavior, the > expected speedup may not be realized, and in some cases performance can even be slower than dense attention.
+>
+> * The Block-Sparse Attention build process can be memory-intensive, especially when compiling in parallel with multiple `ninja` jobs. It is recommended to keep sufficient memory available during compilation to avoid OOM errors. Once the build is complete, runtime memory usage is stable and not an issue.
+> * The Block-Sparse Attention backend currently achieves ideal acceleration only on NVIDIA A100 or A800 GPUs (Ampere architecture). On H100/H800 (Hopper) GPUs, due to differences in hardware scheduling and sparse kernel behavior, the expected speedup may not be realized, and in some cases performance can even be slower than dense attention.
 
 ```bash
 git clone https://github.com/mit-han-lab/Block-Sparse-Attention
@@ -82,7 +101,6 @@ pip install packaging
 pip install ninja
 python setup.py install
 ```
-
 
 #### 4️⃣ Download Model Weights from Hugging Face
 
@@ -134,7 +152,7 @@ The overview of **FlashVSR**. This framework features:
 * **Tiny Conditional Decoder** for efficient, high-quality reconstruction.
 * **VSR-120K Dataset** consisting of **120k videos** and **180k images**, supports joint training on both images and videos.
 
-<img src="./examples/WanVSR/assert/flowchart.jpg" width="1000" />
+<img src="./examples/WanVSR/assets/flowchart.jpg" width="1000" />
 
 ---
 
