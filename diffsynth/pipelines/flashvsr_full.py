@@ -441,7 +441,7 @@ class FlashVSRFullPipeline(BasePipeline):
                         LQ_video[:, :, :frames.shape[2], :, :],
                         clip_range=(-1, 1),
                         chunk_size=16,
-                        method='wavelet'
+                        method='adain'
                     )
             except:
                 pass
