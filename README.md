@@ -28,9 +28,10 @@ Diffusion models have recently advanced video restoration, but applying them to 
 
 ---
 
-### ⚠️ Important Quality Notice (ComfyUI & other third-party implementations)
+### 📢 Important Quality Note (ComfyUI & other third-party implementations)
 
-Some third-party implementations of FlashVSR (e.g., early ComfyUI versions) do **not include our Locality-Constrained Sparse Attention (LCSA)** module and instead fall back to **dense attention**. This may lead to **noticeable quality degradation**, especially at higher resolutions.  
+First of all, huge thanks to the community for the fast adoption, feedback, and contributions to FlashVSR! 🙌  
+During community testing, we noticed that some third-party implementations of FlashVSR (e.g. early ComfyUI versions) do **not include our Locality-Constrained Sparse Attention (LCSA)** module and instead fall back to **dense attention**. This may lead to **noticeable quality degradation**, especially at higher resolutions.  
 Community discussion: https://github.com/kijai/ComfyUI-WanVideoWrapper/issues/1441
 
 Below is a comparison example provided by a community member:
@@ -40,11 +41,12 @@ Below is a comparison example provided by a community member:
 | <video src="https://github.com/user-attachments/assets/ea12a191-48d5-47c0-a8e5-e19ad13581a9" controls width="260"></video> | <video src="https://github.com/user-attachments/assets/c8e53bd5-7eca-420d-9cc6-2b9c06831047" controls width="260"></video> | <video src="https://github.com/user-attachments/assets/376057d6-d0f9-4252-bb55-1e52d6da3d21" controls width="260"></video> |
 
 ✅ The **official FlashVSR pipeline (this repository)**:
-- **Better preserves fine structures and details**  
+- **Better preserves fine structures and details**
 - **Effectively avoids texture aliasing and visual artifacts**
 
-We are also working on a **version that does not rely on the Block-Sparse Attention library** while keeping **the same output quality**; this alternative may run slower than the optimized original implementation.  
-Thanks to the community for testing and helping improve FlashVSR together! 🚀
+We are also working on a **version that does not rely on the Block-Sparse Attention library** while keeping **the same output quality**; this alternative may run slower than the optimized original implementation.
+
+Thanks again to the community for actively testing and helping improve FlashVSR together! 🚀
 
 ---
 
