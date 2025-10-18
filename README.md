@@ -36,9 +36,9 @@ Community discussion: https://github.com/kijai/ComfyUI-WanVideoWrapper/issues/14
 
 Below is a comparison example provided by a community member:
 
-| Fig.1 – LR Input | Fig.2 – Dense Attention (no LCSA, third-party) | Fig.3 – Official FlashVSR (with LCSA) |
+| Fig.1 – LR Input Video | Fig.2 – 3rd-party (no LCSA) | Fig.3 – Official FlashVSR |
 |------------------|-----------------------------------------------|--------------------------------------|
-| <video src="https://github.com/user-attachments/assets/ea12a191-48d5-47c0-a8e5-e19ad13581a9" controls width="260"></video> | <video src="https://github.com/user-attachments/assets/c8e53bd5-7eca-420d-9cc6-2b9c06831047" controls width="260"></video> | <video src="https://github.com/user-attachments/assets/376057d6-d0f9-4252-bb55-1e52d6da3d21" controls width="260"></video> |
+| <video src="https://github.com/user-attachments/assets/ea12a191-48d5-47c0-a8e5-e19ad13581a9" controls width="260"></video> | <video src="https://github.com/user-attachments/assets/c8e53bd5-7eca-420d-9cc6-2b9c06831047" controls width="260"></video> | <video src="https://github.com/user-attachments/assets/a4d80618-d13d-4346-8e37-38d2fabf9827" controls width="260"></video> |
 
 ✅ The **official FlashVSR pipeline (this repository)**:
 - **Better preserves fine structures and details**
