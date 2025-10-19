@@ -94,9 +94,11 @@ FlashVSR relies on the **Block-Sparse Attention** backend to enable flexible and
 > **⚠️ Note:**
 >
 > * The Block-Sparse Attention build process can be memory-intensive, especially when compiling in parallel with multiple `ninja` jobs. It is recommended to keep sufficient memory available during compilation to avoid OOM errors. Once the build is complete, runtime memory usage is stable and not an issue.
-> * The Block-Sparse Attention backend currently achieves ideal acceleration only on NVIDIA A100 or A800 GPUs (Ampere architecture). On H100/H800 (Hopper) GPUs, due to differences in hardware scheduling and sparse kernel behavior, the expected speedup may not be realized, and in some cases performance can even be slower than dense attention.
+> * Based on our testing, the Block-Sparse Attention backend works correctly on **NVIDIA A100 and A800** (Ampere) with **ideal acceleration performance**, and it also runs correctly on **H200** (Hopper) but the acceleration is limited due to hardware scheduling differences and sparse kernel behavior. **Compatibility and performance on other GPUs (e.g., RTX 40/50 series or H800) are currently unknown**. For more details, please refer to the official documentation: https://github.com/mit-han-lab/Block-Sparse-Attention
+
 
 ```bash
+# ✅ Recommended: clone and install in a separate clean folder (outside the FlashVSR repo)
 git clone https://github.com/mit-han-lab/Block-Sparse-Attention
 cd Block-Sparse-Attention
 pip install packaging
