@@ -24,6 +24,7 @@ Diffusion models have recently advanced video restoration, but applying them to 
 ### 📰 News
 
 - **Release Date:** October 2025 — Inference code and model weights are available now! 🎉  
+- **Bug Fix (October 21, 2025):** Fixed `local_attention_mask` update logic to prevent artifacts when switching between different aspect ratios during continuous inference.  
 - **Coming Soon:** Dataset release (**VSR-120K**) for large-scale training.
 
 ---
