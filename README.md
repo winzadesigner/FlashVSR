@@ -144,6 +144,8 @@ cd examples/WanVSR
 python infer_flashvsr_full.py      # Full model
 # or
 python infer_flashvsr_tiny.py      # Tiny model
+# or
+python infer_flashvsr_tiny_long_video.py      # Tiny model for long videos
 ```
 
 ---
